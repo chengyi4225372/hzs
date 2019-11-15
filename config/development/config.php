@@ -140,7 +140,6 @@ return [
         '__IMAGES__'   => '/images',
         '__CDN__'    => '',
         '__HOME__'   =>'/static/home',
-        '__SPI__'   =>'/static/spirit',
     ],
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => APP_PATH . 'common' . DS . 'view' . DS . 'tpl' . DS . 'dispatch_jump.tpl',
