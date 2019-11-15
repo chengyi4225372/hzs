@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/v1\view\index\index.html";i:1573779806;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\layout\default.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\meta.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\header.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\left.html";i:1573801204;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\footer.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\script.html";i:1573779806;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/v1\view\charts\chart\index.html";i:1573801883;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\layout\default.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\meta.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\header.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\left.html";i:1573801204;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\footer.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\script.html";i:1573802144;}*/ ?>
 <!DOCTYPE>
 <html lang="zh-CN">
 <head>
@@ -320,63 +320,51 @@
     <!-- Full Width Column -->
     <div class="content-wrapper">
         
-    <!-- Main content -->
-    <section class="content">
-        <div class="box box-default color-palette-box" style="min-height:700px;">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-                        <a href="<?php echo url('/v1/protuct/protucts/index'); ?>">
-                            <div class="info-box-content">
-                                <span class="info-box-text"><h2>共享产品</h2></span>
-                                <span class="info-box-number"><h2><?php echo $pro_count; ?></h2></span>
-                            </div>
-                        </a>
 
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
 
-                        <a href="<?php echo url('/v1/info/infos/index'); ?>">
-                            <div class="info-box-content">
-                                <span class="info-box-text"><h2>招标信息</h2></span>
-                                <span class="info-box-number"><h2><?php echo $info_count; ?></h2></span>
-                            </div>
-                        </a>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-
-                <!-- fix for small devices only -->
-                <div class="clearfix visible-sm-block"></div>
-
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-
-                        <a href="<?php echo url('/v1/users/user/index'); ?>">
-                            <div class="info-box-content">
-                                <span class="info-box-text"><h2>用户信息</h2></span>
-                                <span class="info-box-number"><h2><?php echo $user_count; ?></h2></span>
-                            </div>
-                        </a>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-            </div>
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box" style="min-height:700px;">
+        <div class="box-header with-border">
+            <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
+            <button type="button" class="btn bg-purple btn-sm btn-dialog"
+                    id="addchart" data-url="<?php echo url('/v1/charts/chart/add'); ?>">
+                <i class="fa fa-plus-circle">添加</i></button>
         </div>
-    </section>
+        <div class="box-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+
+                <th class="text-center">图片</th>
+                <th class="text-center">创建时间</th>
+                <th class="text-center">操作</th>
+                </thead>
+                <tbody>
+
+                <tr>
+
+                    <td class="text-center">
+                        <a href="">
+                            <img src=""  style="width: 80px;height:50px;">
+                        </a>
+                    </td>
+                    <td class="text-center">2222</td>
+
+                    <td class="text-center">
+                        <a href="javascript:void(0)" class="btn btn-info" data-url="" data-id="" onclick="">编辑</a>
+
+                        <a href="javascript:void(0)" class="btn btn-danger" data-url="" data-id="" onclick="">删除</a>
+
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+            <div class="pages"></div>
+        </div>
+    </div>
+
+</section>
 
     </div>
 
@@ -431,7 +419,9 @@
 <script src="/static/assets/dist/js/protuct.js"></script>
 <script src="/static/assets/dist/js/infos.js"></script>
 <script src="/static/assets/dist/js/partners.js"></script>
-<script src="/static/assets/dist/js/works.js"></script>
+
+<!-- chart js-->
+<script src="/static/assets/dist/js/chart.js"></script>
 <script>
     admin_module.changepas();
 </script>

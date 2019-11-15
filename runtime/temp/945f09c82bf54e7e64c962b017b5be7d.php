@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/home\view\index\index.html";i:1573798915;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/home\view\index\index.html";i:1573800460;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +49,7 @@
         <!-- 头像部分 -->
         <div class="user-icon-box">
           <img class="user-icon" src="/static/home/images/icon.png" alt="">
-          <span class="phone">133****5674</span>
+          <span class="phone"  id="mobile_phone">133****5674</span>
           <div class="login-out">
             <ul>
               <li><a href="">退出登录</a></li>
