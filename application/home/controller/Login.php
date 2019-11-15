@@ -82,73 +82,18 @@ class Login extends BaseController
      */
     public function savetokens()
     {
-        $hlg_url = Config::get('curl.hlg');
         //允许跨域
         header("Access-Control-Allow-Origin:*");
-        //token
-        if (empty($_GET['msg1']) || !isset($_GET['msg1'])) {
-            $this->redirect($this->base_urls);
-            return;
-        }
-        //电话
-        if (empty($_GET['msg2']) || !isset($_GET['msg2'])) {
-            $this->redirect($this->base_urls);
-            return;
-        }
-        //角色
-        if (empty($_GET['msg3']) || !isset($_GET['msg3'])) {
-            $this->redirect($this->base_urls);
-            return;
-        }
-        $mobile = $_GET['msg2'];
-        $token = $_GET['msg1'];
-        $userType = $_GET['msg3'];
-        Cookie::set('mobile', $mobile);
-        Cookie::set('token', $token);
-        Cookie::set('userType', $userType);
-        $array = [];
-        $array['mobile'] = $mobile;
-        $array['token'] = $token;
-        $array['userType'] = $userType;
-//        //请求惠灵工的页面的接口把用户信息带过去
-        $res = curl_post($hlg_url.'/home/login/savetokens',$array);
-        if ($userType == 'B') {
-            $this->redirect($this->base_urls . '/task/task');
-        }
-        if ($userType == 'C') {
-            $this->redirect($this->base_urls . '/personTask/myTask');
-        }
+        $mobile = $_POST['mobile'];
+        $token = $_POST['token'];
+        $userType = $_POST['userType'];
+        Cookie::set('mobile',$mobile);
+        Cookie::set('token',$token);
+        Cookie::set('userType',$userType);
+        return json(['status' => 200,'message' => 'success']);
 
     }
 
-
-    /**
-     * @DESC：全局退出
-     * @author: jason
-     * @date: 2019-11-13 09:24:43
-     */
-    public function commonlogout()
-    {
-        $hlg_url = Config::get('curl.hlg');
-        //允许跨域
-        header("Access-Control-Allow-Origin:*");
-        //是否是退出
-        if (empty($_GET['is_logout']) || !isset($_GET['is_logout'])) {
-            $this->redirect($this->base_urls);
-            return;
-        }
-        //电话
-        if (empty($_GET['mobile']) || !isset($_GET['mobile'])) {
-            $this->redirect($this->base_urls);
-            return;
-        }
-        Cookie::clear('mobile');
-        Cookie::clear('token');
-        Cookie::clear('userType');
-        $res = curl_get($hlg_url.'/home/login/logout');
-        $this->redirect($this->base_urls . '/login');
-        return;
-    }
 
 
     /**
@@ -159,16 +104,15 @@ class Login extends BaseController
      */
     public function logout()
     {
+        $website_url = Config::get('curl.website');
         $hlg_url = Config::get('curl.hlg');
-        if ($this->request->isAjax() && $this->request->isPost()) {
-            Cookie::clear('mobile');
-            Cookie::clear('token');
-            Cookie::clear('userType');
-            $res = curl_get($hlg_url.'/home/login/logout2');
-            return json(['status' => true, 'message' => '退出登录成功']);
-        } else {
-            return json(['status' => false, 'message' => '退出登录失败']);
-        }
+        Cookie::clear('mobile');
+        Cookie::clear('token');
+        Cookie::clear('userType');
+        //官网退出
+        $res = curl_get($website_url.'/home/login/apilogout');
+        $res2 = curl_get($hlg_url.'/home/login/apilogout');
+        return json(['status' => 200,'message' => 'success']);
     }
 
     /**
