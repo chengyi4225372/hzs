@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/v1\view\charts\chart\index.html";i:1573801883;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\layout\default.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\meta.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\header.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\left.html";i:1573801204;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\footer.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\script.html";i:1573802144;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/v1\view\charts\chart\index.html";i:1574057579;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\layout\default.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\meta.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\header.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\left.html";i:1573801204;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\footer.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\script.html";i:1573802144;}*/ ?>
 <!DOCTYPE>
 <html lang="zh-CN">
 <head>
@@ -340,24 +340,23 @@
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-
+                  <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tr>
-
                     <td class="text-center">
-                        <a href="">
-                            <img src=""  style="width: 80px;height:50px;">
+                        <a href="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>">
+                            <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>"  style="width: 150px;height:80px;">
                         </a>
                     </td>
-                    <td class="text-center">2222</td>
+                    <td class="text-center"><?php echo $vo['create_time']; ?></td>
 
                     <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info" data-url="" data-id="" onclick="">编辑</a>
+                        <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/charts/chart/edit'); ?>" data-id="<?php echo $vo['id']; ?>" onclick="">编辑</a>
 
-                        <a href="javascript:void(0)" class="btn btn-danger" data-url="" data-id="" onclick="">删除</a>
+                        <a href="javascript:void(0)" class="btn btn-danger" data-url="<?php echo url('/v1/charts/chart/del'); ?>" data-id="<?php echo $vo['id']; ?>" onclick="">删除</a>
 
                     </td>
                 </tr>
-
+               <?php endforeach; endif; else: echo "" ;endif; ?>
                 </tbody>
             </table>
             <div class="pages"></div>
