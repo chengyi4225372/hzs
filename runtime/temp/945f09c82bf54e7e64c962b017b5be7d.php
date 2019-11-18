@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/home\view\index\index.html";i:1573800460;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/home\view\index\index.html";i:1573810468;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +10,10 @@
   <title>惠找事</title>
   <link rel="stylesheet" href="/static/home/css/base.css">
   <link rel="stylesheet" href="/static/home/css/index.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="/static/home/js/clamp.js"></script>
   <script src='/static/home/js/index.js'></script>
+  <script src='/static/common/js/public.js'></script>
 </head>
 
 <body>
@@ -49,10 +51,10 @@
         <!-- 头像部分 -->
         <div class="user-icon-box">
           <img class="user-icon" src="/static/home/images/icon.png" alt="">
-          <span class="phone"  id="mobile_phone">133****5674</span>
+          <span class="phone"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></span>
           <div class="login-out">
             <ul>
-              <li><a href="">退出登录</a></li>
+              <li><a href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>" onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出登录</a></li>
             </ul>
           </div>
         </div>
@@ -521,7 +523,76 @@
 
 
   </div>
+<script>
+  window.onload = function () {
 
+    // 盒子切换
+
+    let left = document.querySelector('.create-income-left')
+    let right = document.querySelector('.create-income-right')
+    let imgLeft = document.querySelector('.create-income-left .icon img')
+    let imgRight = document.querySelector('.create-income-right .icon img')
+    console.log(left, right)
+    left.onmouseover = function () {
+      left.classList.add('create-income-active')
+
+      right.classList.remove('create-income-active')
+      imgLeft.src="/static/home/images/tishi2.png"
+      imgRight.src="/static/home/images/xiaojuchang2.png"
+    }
+    right.onmouseover = function () {
+      right.classList.add('create-income-active')
+      left.classList.remove('create-income-active')
+      imgLeft.src="/static/home/images/tishi.png"
+      imgRight.src="/static/home/images/xiaojuchang.png"
+    }
+
+    // 返回顶部
+    window.onscroll = function () {
+      var top = document.body.scrollTop || document.documentElement.scrollTop;
+      console.log(top)
+      console.log(document.body.scrollTop);
+      console.log(document.documentElement.scrollTop);
+
+      if (top >= 1080) {
+        let goTop = document.getElementById('goTop')
+        goTop.style.display = "block"
+
+        // console.log(goTop);
+        var timer = null;
+        goTop.onclick = function () {
+          cancelAnimationFrame(timer);
+          //获取当前毫秒数
+          var startTime = +new Date();
+          //获取当前页面的滚动高度
+          var b = document.body.scrollTop || document.documentElement.scrollTop;
+          var d = 500;
+          var c = b;
+          timer = requestAnimationFrame(function func() {
+            var t = d - Math.max(0, startTime - (+new Date()) + d);
+            document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
+            timer = requestAnimationFrame(func);
+            if (t == d) {
+              cancelAnimationFrame(timer);
+            }
+          });
+        }
+      } else if (top < 1080) {
+
+        // 返回顶部样式
+        let goTop = document.getElementById('goTop')
+        goTop.style.display = "none"
+
+      }
+    }
+
+
+
+
+
+
+  }
+</script>
 </body>
 
 </html>

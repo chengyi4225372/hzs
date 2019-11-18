@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/v1\view\index\index.html";i:1573779806;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\layout\default.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\meta.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\header.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\left.html";i:1573801204;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\footer.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\script.html";i:1573779806;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/v1\view\index\index.html";i:1573779806;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\layout\default.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\meta.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\header.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\left.html";i:1573801204;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\footer.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\script.html";i:1573802144;}*/ ?>
 <!DOCTYPE>
 <html lang="zh-CN">
 <head>
@@ -431,7 +431,9 @@
 <script src="/static/assets/dist/js/protuct.js"></script>
 <script src="/static/assets/dist/js/infos.js"></script>
 <script src="/static/assets/dist/js/partners.js"></script>
-<script src="/static/assets/dist/js/works.js"></script>
+
+<!-- chart js-->
+<script src="/static/assets/dist/js/chart.js"></script>
 <script>
     admin_module.changepas();
 </script>

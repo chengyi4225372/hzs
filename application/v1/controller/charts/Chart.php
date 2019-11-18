@@ -5,6 +5,7 @@ namespace app\v1\controller\charts;
 use app\common\controller\AuthController;
 use app\v1\service\Chartservice;
 use think\Config;
+
 class Chart extends AuthController
 {
     /**首页
@@ -31,7 +32,7 @@ class Chart extends AuthController
         }
 
         if($this->request->isAjax() || $this->request->isPost()) {
-            $data['img'] = input('post.imgs','','trim');
+            $data['imgs'] = input('post.imgs','','trim');
 
             $data['create_time'] = date('Y-m-d');
 
@@ -46,13 +47,21 @@ class Chart extends AuthController
         }
     }
 
-    //编辑
+    /**
+     * 编辑 todo 未完成
+     * @return mixed
+     */
     public function edit(){
         if($this->request->isGet()){
             $id = input('get.id','','int');
             $info = Chartservice::instance()->Getidinfo($id);
             $this->assign('info',$info);
             return $this->fetch();
+        }
+
+        //编辑操作
+        if($this->request->isPost()){
+
         }
     }
 

@@ -1,0 +1,54 @@
+---------------------------------------------------------------
+[ 2019-11-18T13:51:19+08:00 ] 127.0.0.1 POST /v1/charts/chart/add.html
+[ error ] [0]数据表字段不存在:[img][C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Builder.php:111]
+---------------------------------------------------------------
+[ 2019-11-18T13:51:26+08:00 ] 127.0.0.1 POST /v1/charts/chart/add.html
+[ error ] [0]数据表字段不存在:[img][C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Builder.php:111]
+---------------------------------------------------------------
+[ 2019-11-18T13:53:46+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [0]致命错误: Call to undefined function defalut()[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\runtime\temp\b5dfc2df563efd8e729c889121e9405f.php:346]
+---------------------------------------------------------------
+[ 2019-11-18T13:54:01+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T13:54:03+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T13:54:37+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T13:55:42+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T13:59:33+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T14:00:02+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T14:00:03+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T14:05:55+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T14:07:22+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T14:07:24+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T14:07:35+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T14:09:41+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T14:09:42+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T14:09:43+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T14:09:43+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]

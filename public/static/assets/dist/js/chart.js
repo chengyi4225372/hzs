@@ -28,7 +28,7 @@ $('.cancle').click(function(){
 
     var imgs = $('#Images').val();
 
-    if($imgs == '' || imgs == undefined || imgs =='undefined'){
+    if(imgs == '' || imgs == undefined || imgs =='undefined'){
         layer.msg('请上传图片！');
         return false;
     }
@@ -86,4 +86,20 @@ function uploadFiles() {
  */
 $('').click(function(){
 
-})
+});
+
+
+/**
+ * 删除
+ */
+ function del(){
+     var url = $(this).attr('data-url');
+     var id  = $(this).attr('data-id');
+
+     if(url == '' || url == undefined){
+         return false;
+     }
+
+
+     $.post(url,{},)
+}
