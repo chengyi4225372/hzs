@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/home\view\index\index.html";i:1573810468;}*/ ?>
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/home\view\index\index.html";i:1574065324;}*/ ?>
+<!DOCTYPE>
 <html lang="en">
 
 <head>
@@ -30,22 +30,22 @@
         <!-- nav部分 -->
         <div class="nav">
           <ul class="clearfix">
-            <li><a href="#">首页</a></li>
-            <li><a href="#">惠优税</a></li>
-            <li><a href="#">惠灵工</a></li>
-            <li><a href="#">惠多薪</a></li>
-            <li><a href="#">惠创业</a></li>
-            <li class="nav-active"><a href="#">惠找事</a></li>
-            <li><a href="#">惠启动</a></li>
+            <li><a href="<?php echo config('curl.website'); ?>">首页</a></li>
+            <li><a  href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+            <li><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></li>
+            <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
+            <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+            <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠找事</a></li>
+            <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li>
           </ul>
         </div>
         <!-- 登陆注册 -->
         <?php if(empty($userinfo['mobile'])): ?>
         <div class="loging clearfix">
-          <div class="register-btn"><a href="./login.html">
+          <div class="register-btn"><a href="<?php echo config('curl.ge_login_url'); ?>">
             登陆
           </a></div>
-          <div class="loging-btn"><a href="./register.html">注册</a></div>
+          <div class="loging-btn"><a href="<?php echo config('curl.gr_register_url'); ?>">注册</a></div>
         </div>
         <?php else: ?>
         <!-- 头像部分 -->
@@ -66,7 +66,7 @@
     </div>
 
     <!-- 头部 -->
-    <div class='header-box'>
+    <div class='header-box' style="background: url(<?php echo $chart['imgs']; ?>) no-repeat center bottom;">
       <div class='w header-container clearfix'>
         <div class="header-icon">
           <div><img src="/static/home/images/headericon.png" alt=""></div>
@@ -80,12 +80,12 @@
         </div>
         <div class="focus-icon">
           热门搜索:
-          <a href="#">服务员</a>
-          <a href="#">餐饮工</a>
-          <a href="#">促销导购</a>
-          <a href="#">麦当劳</a>
-          <a href="#">海底捞</a>
-          <a href="#">星巴克</a>
+          <a href="javascript:void(0)">服务员</a>
+          <a href="javascript:void(0)">餐饮工</a>
+          <a href="javascript:void(0)">促销导购</a>
+          <a href="javascript:void(0)">麦当劳</a>
+          <a href="javascript:void(0)">海底捞</a>
+          <a href="javascript:void(0)">星巴克</a>
         </div>
       </div>
 
@@ -105,7 +105,7 @@
         <div class="high-salary-project-items">
           <ul class="clearfix">
             <li class="high-salary-project-item">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <div class="high-salary-project-item-img">服务员</div>
                 <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
                 <div class="require">
@@ -122,7 +122,7 @@
               </a>
             </li>
             <li class="high-salary-project-item">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <div class="high-salary-project-item-img">服务员</div>
                 <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
                 <div class="require">
@@ -137,7 +137,7 @@
               </a>
             </li>
             <li class="high-salary-project-item">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <div class="high-salary-project-item-img">服务员</div>
                 <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
                 <div class="require">
@@ -152,7 +152,7 @@
               </a>
             </li>
             <li class="high-salary-project-item">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <div class="high-salary-project-item-img">服务员</div>
                 <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
                 <div class="require">
@@ -167,7 +167,7 @@
               </a>
             </li>
             <li class="high-salary-project-item">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <div class="high-salary-project-item-img">服务员</div>
                 <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
                 <div class="require">
@@ -182,7 +182,7 @@
               </a>
             </li>
             <li class="high-salary-project-item">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <div class="high-salary-project-item-img">服务员</div>
                 <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
                 <div class="require">
@@ -197,7 +197,7 @@
               </a>
             </li>
             <li class="high-salary-project-item">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <div class="high-salary-project-item-img">服务员</div>
                 <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
                 <div class="require">
@@ -212,7 +212,7 @@
               </a>
             </li>
             <li class="high-salary-project-item">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <div class="high-salary-project-item-img">服务员</div>
                 <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
                 <div class="require">
@@ -289,7 +289,7 @@
         <div class="our-services-items">
           <ul class="clearfix">
             <li class="our-services-item">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <div>
                   <span>
                     <img class="our-services-active1" src="/static/home/images/yonghuicon.png" alt="">
@@ -304,7 +304,7 @@
               </a>
             </li>
             <li class="our-services-item">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <div>
                   <span>
                     <img class="our-services-active1" src="/static/home/images/shezhi.png" alt="">
@@ -319,7 +319,7 @@
               </a>
             </li>
             <li class="our-services-item">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <div>
                   <span>
                     <img class="our-services-active1" src="/static/home/images/mingpian.png" alt="">
@@ -334,7 +334,7 @@
               </a>
             </li>
             <li class="our-services-item">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <div>
                   <span>
                     <img class="our-services-active1" src="/static/home/images/mingpian.png" alt="">
@@ -428,7 +428,7 @@
     <!-- 广告位 -->
     <div class="advertising-box">
       <div class="w advertising">
-        <a href="#"><img src="/static/home/images/guanggaowei.png" alt=""></a>
+        <a href="javascript:void(0)"><img src="/static/home/images/guanggaowei.png" alt=""></a>
       </div>
     </div>
 
@@ -456,30 +456,30 @@
         </div>
         <div class='parter_catefories'>
           <dl>
-            <dt><a href="#">服务产品</a></dt>
-            <dd><a href="#">服务型税筹</a></dd>
-            <dd><a href="#">门户型税筹</a></dd>
-            <dd><a href="#">人力资源</a></dd>
+            <dt><a href="javascript:void(0)">服务产品</a></dt>
+            <dd><a href="javascript:void(0)">服务型税筹</a></dd>
+            <dd><a href="javascript:void(0)">门户型税筹</a></dd>
+            <dd><a href="javascript:void(0)">人力资源</a></dd>
           </dl>
           <dl>
-            <dt><a href="#">招商政策</a></dt>
-            <dd><a href="#">招商政策网</a></dd>
+            <dt><a href="javascript:void(0)">招商政策</a></dt>
+            <dd><a href="javascript:void(0)">招商政策网</a></dd>
           </dl>
           <dl>
-            <dt><a href="#">合作</a></dt>
-            <dd><a href="#">代理合作</a></dd>
+            <dt><a href="javascript:void(0)">合作</a></dt>
+            <dd><a href="javascript:void(0)">代理合作</a></dd>
           </dl>
           <dl>
-            <dt><a href="#">公司信息</a></dt>
-            <dd><a href="#">瑟维斯有限公司</a></dd>
-            <dd><a href="#">惠创优产业联盟</a></dd>
-            <dd><a href="#">中兴瑞华有限公司</a></dd>
+            <dt><a href="javascript:void(0)">公司信息</a></dt>
+            <dd><a href="javascript:void(0)">瑟维斯有限公司</a></dd>
+            <dd><a href="javascript:void(0)">惠创优产业联盟</a></dd>
+            <dd><a href="javascript:void(0)">中兴瑞华有限公司</a></dd>
           </dl>
           <dl>
-            <dt><a href="#">联系我们</a></dt>
-            <dd><a href="#">400-150-9896</a></dd>
-            <dd><a href="#">hcylm008@dingtalk.com</a></dd>
-            <dd><a href="#">武汉市硚口区南国大武汉H座18楼</a></dd>
+            <dt><a href="javascript:void(0)">联系我们</a></dt>
+            <dd><a href="javascript:void(0)">400-150-9896</a></dd>
+            <dd><a href="javascript:void(0)">hcylm008@dingtalk.com</a></dd>
+            <dd><a href="javascript:void(0)">武汉市硚口区南国大武汉H座18楼</a></dd>
           </dl>
 
         </div>

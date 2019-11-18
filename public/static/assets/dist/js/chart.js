@@ -82,24 +82,87 @@ function uploadFiles() {
 
 
 /**
- * 编辑
+ * 编辑框
  */
-$('').click(function(){
+$('.edits').click(function(){
 
+    var url = $(this).attr('data-url');
+
+    layer.open({
+        type: 2,
+        title: '添加',
+        shadeClose: true,
+        shade: 0.8,
+        area: ['40%', '50%'],
+        content: url, //iframe的url
+    });
 });
+
+
+$('.edit_save').click(function(){
+
+    var url  = $(this).attr('data-url');
+    var id   = $(this).attr('data-id');
+    var imgs = $('#Images').val();
+
+    if(url == '' || url == undefined){
+        return false;
+    }
+
+    if(imgs == '' || imgs == undefined  || imgs =='undefined' ){
+        layer.msg('请上传图片');
+        return false;
+    }
+
+    $.post(url,{'id':id,'imgs':imgs},function(ret){
+         if(ret.code == 200){
+            layer.msg(ret.msg,{icon:6},function () {
+                parent.location.reload();
+            })
+         }
+
+         if(ret.code == 400){
+             layer.msg(ret.msg,{icon:6},function () {
+                 parent.location.reload();
+             })
+         }
+
+    },'json')
+
+})
 
 
 /**
  * 删除
  */
- function del(){
-     var url = $(this).attr('data-url');
-     var id  = $(this).attr('data-id');
+ function del(obj){
+     var url = $(obj).attr('data-url');
+     var id  = $(obj).attr('data-id');
 
      if(url == '' || url == undefined){
          return false;
      }
 
+    layer.confirm('您确定要删除？', {
+        btn: ['确定','点错了'] //按钮
+    }, function(){
+        $.get(url,{'id':id},function(ret){
 
-     $.post(url,{},)
+               if(ret.code == 200){
+                 layer.msg(ret.msg,{icon:6},function(){
+                     parent.location.reload();
+                 })
+               }
+
+               if(ret.code == 400){
+                   layer.msg(ret.msg,{icon:5},function(){
+                       parent.location.reload();
+                   })
+               }
+
+        },'json')
+    }, function(){
+        parent.layer.closeAll();
+    });
+
 }
