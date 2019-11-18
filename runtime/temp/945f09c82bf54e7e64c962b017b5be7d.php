@@ -1,426 +1,527 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/home\view\index\index.html";i:1573779806;}*/ ?>
- <!DOCTYPE>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/home\view\index\index.html";i:1573800460;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>惠企云</title>
-    <link rel="stylesheet" href="/static/home/css/base.css">
-    <link rel="stylesheet" href="/static/home/css/index.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src='/static/home/js/index.js'></script>
-    <script src="/static/assets/plugins/layui/layui.all.js"></script>
-    <script src='/static/home/js/common.js'></script>
-    <script src='/static/common/js/public.js'></script>
-    <style>
-        /*.header {*/
-            /*background-image: url("<?php echo (isset($slideshow['pic']) && ($slideshow['pic'] !== '')?$slideshow['pic']:'/static/home/images/default.png'); ?>");*/
-        /*}*/
-
-        .success_icon>div:nth-of-type(1) {
-            position: absolute;
-            top: 3.0625rem;
-            left: 0.875rem;
-            width: 24.125rem;
-            height: 10.375rem;
-            background-size: contain;
-            background-image: url('/static/home/images/huiduoxin.png');
-            background-size: 100% 100%;
-        }
-
-        .success_icon>div:nth-of-type(2) {
-            position: absolute;
-            top: 6.625rem;
-            right: -0.1875rem;
-            width: 24.125rem;
-            height: 10.375rem;
-            background-size: 100%;
-            background-image: url('/static/home/images/huichuangyou.png');
-            background-size: 100% 100%;
-        }
-
-        .success_icon>div:nth-of-type(3) {
-            position: absolute;
-            top: 11.875rem;
-            left: -1px;
-            width: 24.125rem;
-            height: 10.375rem;
-            background-size: contain;
-            background-image: url('/static/home/images/huilinggong.png');
-            background-size: 100% 100%;
-        }
-
-        .success_icon>div:nth-of-type(4) {
-            position: absolute;
-            top: 14.3125rem;
-            right: 0.375rem;
-            width: 24.125rem;
-            height: 10.375rem;
-            background-size: 100%;
-            background-image: url('/static/home/images/huizhaoshi.png');
-            background-size: 100% 100%;
-        }
-
-        .success_icon>div:nth-of-type(5) {
-            position: absolute;
-            bottom: 6.6875rem;
-            left: 0.75rem;
-            width: 24.125rem;
-            height: 10.375rem;
-            background-size: contain;
-            background-image: url('/static/home/images/huiqidong.png');
-            background-size: 100% 100%;
-        }
-
-        .success_icon>div:nth-of-type(6) {
-            position: absolute;
-            bottom: 4.5rem;
-            right: -0.4375rem;
-            width: 24.125rem;
-            height: 10.375rem;
-            background-size: contain;
-            background-image: url('/static/home/images/huichuangye.png');
-            background-size: 100% 100%;
-        }
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>惠找事</title>
+  <link rel="stylesheet" href="/static/home/css/base.css">
+  <link rel="stylesheet" href="/static/home/css/index.css">
+  <script src="/static/home/js/clamp.js"></script>
+  <script src='/static/home/js/index.js'></script>
 </head>
 
-<body id="getdata" data="<?php echo $count; ?>">
+<body>
 
-    <div class='container'>
+  <div class='container'>
 
-
-
-        <!-- 头部 -->
-        <div class='header'>
-            <!-- 头部图标 -->
-            <div class='header_total' id='headerTotal'>
-                <div class='header_line'>
-                    <div class='w header_icon'>
-                        <div class='title_icon'>
-                            <span class='phone'></span>
-                            <span><?php echo $site_info['tel']; ?></span>
-                            <span class='email'></span>
-                            <span><?php echo $site_info['mail']; ?></span>
-                            <!--<span class='bo'></span>-->
-                            <!--<span class='wx'></span>-->
-                            <!--<span class='tie'></span>-->
-                        </div>
-                        <div class='title_lan'>中文</div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <!-- 头部其他内容 -->
-            <div class='header_fixed'>
-                <input type="hidden" id="data_token" value="<?php echo $userinfo['token']; ?>"/>
-                <div class='header_content' id='headerContent'>
-                    <div class='w content'>
-                        <div class='content_logo' id='logo'></div>
-                        <ul>
-                            <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
-                            <li><a href="<?php echo url('/home/optimal/index'); ?>" target="_blank">惠优税</a></li>
-                            <li><a href="http://172.26.3.13:8009/index.php" target="_blank">惠灵工</a></li>
-                            <li><a href="<?php echo url('/home/many/index'); ?>" target="_blank">惠多薪</a></li>
-                            <li><a href="<?php echo url('/home/business/index'); ?>" target="_blank">惠创业</a></li>
-                            <li><a href="<?php echo url('/home/searches/index'); ?>" target="_blank">惠找事</a></li>
-                            <li><a href="<?php echo url('/home/launch/index'); ?>" target="_blank">惠企动</a></li>
-                        </ul>
-
-                        <?php if(empty($userinfo['mobile'])): ?>
-                        <div class='register'>
-                            <!--<a href="<?php echo url('/home/login/login'); ?>">登录</a>-->
-                            <a href="<?php echo $baseurl; ?>">登录</a>
-                            <span></span>
-                            <a href="<?php echo url('/home/login/register'); ?>">注册</a>
-                        </div>
-                        <?php else: ?>
-                        <div class="u_info">
-                            <img src="/static/home/images/user_img.png"
-                                 style="width:30px;height:30px; vertical-align: bottom;">
-                            <p style="display:inline-block;color:#fff;height: 1.5625rem"><?php echo $userinfo['mobile']; ?></p>
-                            <div class="u_info_content" id="u_info_content">
-                                <a class="u_out" href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>" onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
-                            </div>
-                        </div>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- 文字部分-->
-            <div class='content_text'>
-                <div class='w'><?php echo $slideshow['title']; ?></div>
-            </div>
-
-            <div class='rentong'>
-                <div class='w'><?php echo $slideshow['desc']; ?></div>
-            </div>
-
-            <div class='btn'>
-                <div class='w'>
-                    <button onclick="showSearch()">定制您的方案</button>
-                </div>
-            </div>
-
+    <!-- 导航部分 -->
+    <div class="nav-box">
+      <div class="w nav-container clearfix">
+        <!-- logo图 -->
+        <div class="logo clearfix">
+          <img src="/static/home/images/logo.png" alt="">
         </div>
-
-
-        <!-- 选择我们 -->
-        <div class='chooseUs'>
-            <div class="w choose">
-                <div class='choose-title'>选择我们</div>
-                <div class='choose-intro'>惠企云平台是一款基于国家政策、以合规化为基础、由金牌顾问团队打造的产品，为企业及个人提供税筹问题的全方位解决方案。</div>
-                <ul class='img_total'>
-                    <li>
-                        <img src="/static/home/images/more.png" alt="">
-                        <a href="#">集专家智“惠”定制</a>
-                    </li>
-                    <li>
-                        <img src="/static/home/images/rainning.png" alt="">
-                        <a href="#">集专家智“惠”定制</a>
-                    </li>
-                    <li>
-                        <img src="/static/home/images/pig.png" alt="">
-                        <a href="#">给您最优“惠”</a>
-                    </li>
-                </ul>
-            </div>
+        <!-- nav部分 -->
+        <div class="nav">
+          <ul class="clearfix">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">惠优税</a></li>
+            <li><a href="#">惠灵工</a></li>
+            <li><a href="#">惠多薪</a></li>
+            <li><a href="#">惠创业</a></li>
+            <li class="nav-active"><a href="#">惠找事</a></li>
+            <li><a href="#">惠启动</a></li>
+          </ul>
         </div>
-
-        <!-- 惠想产品 -->
-        <div class='hui_product'>
-            <div class='w'>
-                <div class='product_logo'></div>
-                <ul class='all_product'>
-                    <?php if(is_array($protuct) || $protuct instanceof \think\Collection || $protuct instanceof \think\Paginator): $i = 0; $__LIST__ = $protuct;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?>
-                    <li>
-                        <img src="<?php echo (isset($v1['imgs']) && ($v1['imgs'] !== '')?$v1['imgs']:''); ?>" alt="">
-                        <a href="#"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?></a>
-                        <a href="#"><?php echo (isset($v1['desc']) && ($v1['desc'] !== '')?$v1['desc']:''); ?></a>
-                        <ul class='one_pic'>
-                            <li><a onclick="showSearch()">获取方案</a></li>
-                            <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>">前往网站</a></li>
-                        </ul>
-                    </li>
-                    <?php endforeach; endif; else: echo "" ;endif; ?>
-                </ul>
-            </div>
+        <!-- 登陆注册 -->
+        <?php if(empty($userinfo['mobile'])): ?>
+        <div class="loging clearfix">
+          <div class="register-btn"><a href="./login.html">
+            登陆
+          </a></div>
+          <div class="loging-btn"><a href="./register.html">注册</a></div>
         </div>
-
-        <div class="prop_box"></div>
-
-
-        <!-- 近期成功案例 -->
-        <input type="hidden" id="add_url" value="<?php echo url('/home/index/ajaximage'); ?>">
-        <div class='success'>
-            <div class='w success_content'>
-                <div class='success_title'></div>
-                <div class='success_icon'>
-                    <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
-                    <div onclick="click_show(this)" keys="<?php echo $key; ?>" class="<?php echo $data_list['is_show'].$key; ?>" data="<?php echo $count; ?>"
-                        data-attr="<?php echo $data_list['is_show']; ?>">
-                        <div class='<?php if($key == 1): ?>hui_icon<?php else: ?>p_icon<?php endif; ?>'>
-                            <div><?php echo $data_list['title2']; ?></div>
-                            <div><?php echo $data_list['title3']; ?></div>
-                            <?php if($key != 1): ?>
-                            <!--<a href="javascript:void(0)">-->
-                            <!--<img src="/static/home/images/jiantou.png" alt="">-->
-                            <!--</a>-->
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                    <?php endforeach; endif; else: echo "" ;endif; ?>
-
-                </div>
-                <div class='to_detailInfo'>
-                    <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info_list): $mod = ($i % 2 );++$i;?>
-                    <div class="<?php echo $info_list['is_show']; ?>">
-                        <div class='huichuangyou_title'><?php echo $info_list['title']; ?></div>
-                        <div class="con">
-                            <div class="desc"><?php echo $info_list['desc']; ?></div>
-                            <div class="desc"><?php echo $info_list['desc2']; ?></div>
-                            <div class="desc"><?php echo $info_list['desc3']; ?></div>
-                            <div class="desc"><?php echo $info_list['desc4']; ?></div>
-                            <div class="desc"><?php echo $info_list['desc5']; ?></div>
-                            <div class="desc"><?php echo $info_list['desc6']; ?></div>
-                            <div class="desc"><?php echo $info_list['desc7']; ?></div>
-                            <div class='total_input'>
-                                <div>
-                                    <input type="text" id='contactName' placeholder="请输入您的姓名..">
-                                </div>
-                                <div>
-                                    <input type="text" id="companyName" placeholder="请输入您的公司名称..">
-                                </div>
-                                <div>
-                                    <input type="text" id='contactMobile' placeholder="请输入您的手机号..">
-                                </div>
-                                <div>
-                                    <input type='hidden' id='source' value='门户首页'>
-                                    <input type='hidden' id='identification' value='企业一站式服务'>
-                                    <input type="button" onclick='getErp()' value='定制您的方案'>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endforeach; endif; else: echo "" ;endif; ?>
-
-                </div>
-            </div>
+        <?php else: ?>
+        <!-- 头像部分 -->
+        <div class="user-icon-box">
+          <img class="user-icon" src="/static/home/images/icon.png" alt="">
+          <span class="phone"  id="mobile_phone">133****5674</span>
+          <div class="login-out">
+            <ul>
+              <li><a href="">退出登录</a></li>
+            </ul>
+          </div>
         </div>
+        <?php endif; ?>
 
 
-
-
-        <!-- 招标信息政策 -->
-        <div class='zhaoBox'>
-            <div class='zhaoInfo'>
-                <div class='diandianone'></div>
-                <div class='diandiantwo'></div>
-                <div class='w'>
-                    <div class='search_info'>
-                        <div class='zhao_title'>
-                        </div>
-
-                        <!-- 搜索 -->
-                        <div class='zhaoSearch'>
-                            <div class='searchLogo'>
-                                <i onclick="search(this)" data-url="<?php echo url('/home/index/infoList'); ?>"></i>
-                                <input type="text" id="keyword" placeholder="搜索招标政策和招标信息...">
-                            </div>
-                            <!-- <button>查询</button> -->
-                        </div>
-                    </div>
-
-                    <div class='zhaomethods'>
-                        <div class='totalInfo_title'>招商政策</div>
-                        <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
-                        <div class='totalInfo_content'>
-                            <a href="javascript:void(0)"
-                               data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"
-                               login_url="<?php echo $baseurl; ?>"
-                               mobile-phone="<?php echo $userinfo['mobile']; ?>"
-                               data-id="<?php echo $ss['id']; ?>" onclick="home_module.show_detail(this)">
-                                <div class='zhao_contentInfo'>
-                                    <div><?php echo $ss['title']; ?></div>
-                                    <div>
-                                        <?php echo $ss['release_time']; ?>
-                                    </div>
-                                </div>
-                                <div> <?php echo $ss['describe']; ?></div>
-                            </a>
-                        </div>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                        <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
-                            data-url="<?php echo url('/home/index/infoList'); ?>"
-                            login_url="<?php echo $baseurl; ?>">了解更多</button>
-                    </div>
-
-                    <div class='zhaoTotalInfo'>
-                        <div class='totalInfo_title'>招标信息</div>
-                        <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
-                        <div class='totalInfo_content'>
-                            <a href="javascript:void(0)"
-                               data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"
-                               login_url="<?php echo $baseurl; ?>"
-                               mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>" onclick="home_module.show_detail(this)">
-                                <div class='zhao_contentInfo'>
-                                    <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
-                                    <div>
-                                        <?php echo $biaos['release_time']; ?>
-                                    </div>
-                                </div>
-                                <div>
-                                    <?php echo $biaos['describe']; ?>
-                                </div>
-                            </a>
-                        </div>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-
-                        <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
-                            data-url="<?php echo url('/home/index/infoList'); ?>"
-                            login_url="<?php echo $baseurl; ?>">了解更多</button>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-        <!-- 合作伙伴 -->
-        <div class='partener'>
-            <div class='w partener_total'>
-                <div class='parter_icon'></div>
-
-                <!-- <div class='search' id='search'>
-                    <input type="text" placeholder="请输入姓名">
-                    <input type="text" placeholder="请输入公司名称">
-                    <input type="text" placeholder="请输入手机号码">
-                    <input type="button" value='定义方案'>
-                </div> -->
-            </div>
-
-        </div>
-
-
-        <div class='partner_bottom'>
-            <div class='w content'>
-                <div class='partener_titile'>用智“慧”创造优“惠”</div>
-                <div class='parterne_info'>
-                    深耕税筹行业多年，合作企业多达几千家。专业为个人和企业解决税务难题。为您提供一站式金融、税务和人力外包服务，以及专业的税筹划分析，最安全、高效、合理的节税措施。我们有最成熟的专家团队和各行业实操经验！作为国内领先的标准化税筹服务互联网平台，我们得到了上海、安徽、江西、湖北等各地政府的大力支持，为企业节税保驾护航！
-                </div>
-                <div class='parter_catefories'>
-                    <dl>
-                        <dt>服务产品</dt>
-                        <dd>服务型税筹</dd>
-                        <dd>门户型税筹</dd>
-                        <dd>人力资源</dd>
-                    </dl>
-                    <dl>
-                        <dt>招商政策</dt>
-                        <dd>招商政策网</dd>
-                    </dl>
-                    <dl>
-                        <dt>合作</dt>
-                        <dd>代理合作</dd>
-                    </dl>
-                    <dl>
-                        <dt>公司信息</dt>
-                        <dd>瑟维斯有限公司</dd>
-                        <dd>惠创优产业联盟</dd>
-                        <dd>中兴瑞华有限公司</dd>
-                    </dl>
-                    <dl>
-                        <dt>联系我们</dt>
-                        <dd><?php echo $site_info['tel']; ?></dd>
-                        <dd><?php echo $site_info['mail']; ?></dd>
-                        <dd><?php echo $site_info['count_code']; ?></dd>
-                    </dl>
-
-                </div>
-                <!--<div class='concat_icon'>-->
-                <!--<div><img src="/static/home/images/bo.png" alt=""></div>-->
-                <!--<div><img src="/static/home/images/wx.png" alt=""></div>-->
-                <!--<div><img src="/static/home/images/tie.png" alt=""></div>-->
-                <!--</div>-->
-            </div>
-        </div>
-
-
-
-        <div class='goTop' id="goTop">
-            <i></i>
-            <div>返回顶部</div>
-        </div>
+      </div>
 
     </div>
+
+    <!-- 头部 -->
+    <div class='header-box'>
+      <div class='w header-container clearfix'>
+        <div class="header-icon">
+          <div><img src="/static/home/images/headericon.png" alt=""></div>
+          <div><span></span></div>
+          <div>没事找事 就要<span>惠找事</span>
+          </div>
+        </div>
+        <div class="header-search">
+          <input type="text">
+          <div>搜索</div>
+        </div>
+        <div class="focus-icon">
+          热门搜索:
+          <a href="#">服务员</a>
+          <a href="#">餐饮工</a>
+          <a href="#">促销导购</a>
+          <a href="#">麦当劳</a>
+          <a href="#">海底捞</a>
+          <a href="#">星巴克</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 高薪项目 -->
+    <div class="high-salary-project-box">
+      <div class="w high-salary-project">
+        <div class="high-salary-project-title">
+          <div class="high-salary-project-title-box">
+            <span>高薪项目</span>
+            <span class="high-salary-project-title-icon"></span>
+          </div>
+        </div>
+        <div class="modified-line"></div>
+        <div class="see-more">查看更多>></div>
+        <div class="high-salary-project-items">
+          <ul class="clearfix">
+            <li class="high-salary-project-item">
+              <a href="#">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="#">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="#">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="#">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="#">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="#">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="#">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="#">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div>换一批<img src="/static/home/images/shuaxing.png" alt="" class="icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 多种方式开始创收 -->
+    <div class="create-income-box">
+      <div class="clearfix create-income w">
+        <div class="create-income-title">
+          <div class="create-income-title-box">
+            <span>多种方式开始创收</span>
+          </div>
+        </div>
+        <div class="modified-line"></div>
+        <div class="create-income-content">
+          <div class="create-income-left">
+            <div class="create-income-shade"></div>
+            <div class="create-income-content-box">
+              <p class="icon">
+                <img src="/static/home/images/tishi.png" alt="">
+              </p>
+              <p>自主创客</p>
+              <p>技能价值化，成就更好自我</p>
+              <div class="content">
+                <p>项目联结更契合，协作产能更高效；</p>
+                <p>实现创意冲动，同时享受工作与生活！</p>
+                <p>适用人群：摄影、设计师、写手、画家、程序员、主持人等掌握一种或多种专业技能的自由职业者</p>
+              </div>
+            </div>
+          </div>
+          <div class="create-income-right create-income-active">
+            <div class="create-income-shade"></div>
+            <div class="create-income-content-box">
+              <p class="icon">
+                <img src="/static/home/images/xiaojuchang.png" alt="">
+              </p>
+              <p>自由务工</p>
+              <p>技能价值化，成就更好自我</p>
+              <div class="content">
+                <p>选择更全面，结薪有保障，</p>
+                <p>高度灵活，选优质用工单位做快乐事！</p>
+                <p>适用人群：季节性务工、传单派发、服务员、审核录入、问卷调查、打包分拣......</p>
+              </div>
+            </div>
+            <div class="create-income-shade"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 我们的服务 -->
+    <div class="our-services-box">
+      <div class="w our-services">
+        <div class="our-services-title">
+          <div class="our-services-title-box">
+            <span>我们的服务</span>
+          </div>
+        </div>
+        <div class="modified-line"></div>
+        <div class="our-services-items">
+          <ul class="clearfix">
+            <li class="our-services-item">
+              <a href="#">
+                <div>
+                  <span>
+                    <img class="our-services-active1" src="/static/home/images/yonghuicon.png" alt="">
+                    <img class="our-services-active2" src="/static/home/images/tucengsi.png" alt="">
+                  </span>
+                </div>
+                <div>灵活用工</div>
+                <div>
+                  <p>云端操作,高效极简信息化管理</p>
+                  <p>共享经济,高效社会化用工调配</p>
+                </div>
+              </a>
+            </li>
+            <li class="our-services-item">
+              <a href="#">
+                <div>
+                  <span>
+                    <img class="our-services-active1" src="/static/home/images/shezhi.png" alt="">
+                    <img class="our-services-active2" src="/static/home/images/tucengsi.png" alt="">
+                  </span>
+                </div>
+                <div>薪酬管理</div>
+                <div>
+                  <p>开票无忧,发放全托管制</p>
+                  <p>安全稳定,零风险零差错</p>
+                </div>
+              </a>
+            </li>
+            <li class="our-services-item">
+              <a href="#">
+                <div>
+                  <span>
+                    <img class="our-services-active1" src="/static/home/images/mingpian.png" alt="">
+                    <img class="our-services-active2" src="/static/home/images/tucengsi.png" alt="">
+                  </span>
+                </div>
+                <div>岗位外包</div>
+                <div>
+                  <p>定制岗位外包，规避劳动纠纷</p>
+                  <p>降低管理成本，缩减管理幅度</p>
+                </div>
+              </a>
+            </li>
+            <li class="our-services-item">
+              <a href="#">
+                <div>
+                  <span>
+                    <img class="our-services-active1" src="/static/home/images/mingpian.png" alt="">
+                    <img class="our-services-active2" src="/static/home/images/tucengsi.png" alt="">
+                  </span>
+                </div>
+                <div>劳务派遣</div>
+                <div>
+                  <p>降低用人成本，拒绝虚高</p>
+                  <p>解决编制不足，提高产能</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 覆盖行业 -->
+    <div class="cover-industry-box">
+      <div class="w cover-industry">
+        <div class="cover-industry-title">
+          <div class="cover-industry-title-box">
+            <span>覆盖行业</span>
+          </div>
+        </div>
+        <div class="modified-line"></div>
+        <div class="cover-industry-items">
+          <ul class="clearfix">
+            <li class="cover-industry-item">
+              <div class="shade"></div>
+              <div class="cover-industry-item-content">
+                <div><img src="/static/home/images/shenghuo.png" alt=""></div>
+                <div>生活服务</div>
+              </div>
+            </li>
+            <li class="cover-industry-item">
+              <div class="shade"></div>
+              <div class="cover-industry-item-content">
+                <div><img src="/static/home/images/yunshu.png" alt=""></div>
+                <div>物流配送</div>
+                <div></div>
+            </li>
+            <li class="cover-industry-item">
+              <div class="shade"></div>
+              <div class="cover-industry-item-content">
+                <div><img src="/static/home/images/tuantongshouyi.png" alt=""></div>
+                <div>传统行业</div>
+              </div>
+            </li>
+            <li class="cover-industry-item">
+              <div class="shade"></div>
+              <div class="cover-industry-item-content">
+                <div><img src="/static/home/images/hulianwnag.png" alt=""></div>
+                <div>互联网</div>
+              </div>
+            </li>
+            <li class="cover-industry-item">
+              <div class="shade"></div>
+              <div class="cover-industry-item-content">
+                <div><img src="/static/home/images/zixun2.png" alt=""></div>
+                <div>咨询营销</div>
+              </div>
+            </li>
+            <li class="cover-industry-item">
+              <div class="shade"></div>
+              <div class="cover-industry-item-content">
+                <div><img src="/static/home/images/peixunfazhan.png" alt=""></div>
+                <div>培训服务</div>
+              </div>
+            </li>
+            <li class="cover-industry-item">
+              <div class="shade"></div>
+              <div class="cover-industry-item-content">
+                <div><img src="/static/home/images/ditie.png" alt=""></div>
+                <div>出行行业</div>
+              </div>
+            </li>
+            <li class="cover-industry-item">
+              <div class="shade"></div>
+              <div class="cover-industry-item-content">
+                <div><img src="/static/home/images/zixun.png" alt=""></div>
+                <div>电话客服</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 广告位 -->
+    <div class="advertising-box">
+      <div class="w advertising">
+        <a href="#"><img src="/static/home/images/guanggaowei.png" alt=""></a>
+      </div>
+    </div>
+
+    <!-- 合作伙伴 -->
+    <div class="partner-box">
+      <div class="w partner">
+        <div class="partner-title">
+          <div class="partner-title-box">
+            <span>合作伙伴</span>
+          </div>
+        </div>
+        <div class="modified-line"></div>
+        <div class="partner-img">
+          <img src="/static/home/images/hezuohuoban2x.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="fotter-box">
+      <div class="w fotter">
+        <div class='partener_titile'>用智“慧”创造优“惠”</div>
+        <div class='parterne_info'>
+          深耕税筹行业多年，合作企业多达几千家。专业为个人和企业解决税务难题。为您提供一站式金融、税务和人力外包服务，以及专业的税筹划分析，最安全、高效、合理的节税措施。我们有最成熟的专家团队和各行业实操经验！作为国内领先的标准化税筹服务互联网平台，我们得到了上海、安徽、江西、湖北等各地政府的大力支持，为企业节税保驾护航！
+        </div>
+        <div class='parter_catefories'>
+          <dl>
+            <dt><a href="#">服务产品</a></dt>
+            <dd><a href="#">服务型税筹</a></dd>
+            <dd><a href="#">门户型税筹</a></dd>
+            <dd><a href="#">人力资源</a></dd>
+          </dl>
+          <dl>
+            <dt><a href="#">招商政策</a></dt>
+            <dd><a href="#">招商政策网</a></dd>
+          </dl>
+          <dl>
+            <dt><a href="#">合作</a></dt>
+            <dd><a href="#">代理合作</a></dd>
+          </dl>
+          <dl>
+            <dt><a href="#">公司信息</a></dt>
+            <dd><a href="#">瑟维斯有限公司</a></dd>
+            <dd><a href="#">惠创优产业联盟</a></dd>
+            <dd><a href="#">中兴瑞华有限公司</a></dd>
+          </dl>
+          <dl>
+            <dt><a href="#">联系我们</a></dt>
+            <dd><a href="#">400-150-9896</a></dd>
+            <dd><a href="#">hcylm008@dingtalk.com</a></dd>
+            <dd><a href="#">武汉市硚口区南国大武汉H座18楼</a></dd>
+          </dl>
+
+        </div>
+        <div class='concat_icon clearfix'>
+          <div><img src="/static/home/images/tie.png" alt=""></div>
+          <div><img src="/static/home/images/wx.png" alt=""></div>
+          <div><img src="/static/home/images/bo.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 返回顶部 -->
+    <div class='goTop' id="goTop">
+      <i></i>
+      <div>返回顶部</div>
+    </div>
+
+    <!-- 弹框 -->
+    <!-- <div class="pop-up-box" id="popbox"> -->
+    <!-- 内容区域 -->
+    <!-- <div class="form">
+                <div class="form-titile">
+                    <p>方案咨询</p>
+                    <span class="turnoff" id="turnoff"></span>
+                </div>
+                <div class="form-content">
+                    <div><span class="title">您的姓名</span><input type="text" placeholder="请输入你的名字"></div>
+                    <div><span class="title">联系方式</span><input type="text" placeholder="请输入你的联系方式"></div>
+                    <div><span class="title">您的公司</span><input type="text" placeholder="请输入你的公司"></div>
+                    <div class="form-btn">获取方案</div>
+                </div> -->
+    <!-- 提交成果后弹窗 -->
+    <!-- <div class="mask-box">
+                    <span></span>
+                    <p class="mask-box-title">提交成功</p>
+                    <p class="mask-box-content">我们会在一个工作日内联系您</p>
+                </div>
+            </div>
+
+        </div> -->
+
+
+  </div>
+
 </body>
 
 </html>
