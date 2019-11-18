@@ -52,3 +52,48 @@
 ---------------------------------------------------------------
 [ 2019-11-18T14:09:43+08:00 ] 127.0.0.1 GET /v1/charts/chart/index.html
 [ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\Model.php:514]
+---------------------------------------------------------------
+[ 2019-11-18T14:32:10+08:00 ] 127.0.0.1 POST /v1/charts/chart/add.html
+[ error ] [10501]SQLSTATE[01000]: Warning: 1265 Data truncated for column 'create_time' at row 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Connection.php:463]
+---------------------------------------------------------------
+[ 2019-11-18T14:32:14+08:00 ] 127.0.0.1 POST /v1/charts/chart/add.html
+[ error ] [10501]SQLSTATE[01000]: Warning: 1265 Data truncated for column 'create_time' at row 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Connection.php:463]
+---------------------------------------------------------------
+[ 2019-11-18T14:32:17+08:00 ] 127.0.0.1 POST /v1/charts/chart/add.html
+[ error ] [10501]SQLSTATE[01000]: Warning: 1265 Data truncated for column 'create_time' at row 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Connection.php:463]
+---------------------------------------------------------------
+[ 2019-11-18T14:32:17+08:00 ] 127.0.0.1 POST /v1/charts/chart/add.html
+[ error ] [10501]SQLSTATE[01000]: Warning: 1265 Data truncated for column 'create_time' at row 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Connection.php:463]
+---------------------------------------------------------------
+[ 2019-11-18T14:32:36+08:00 ] 127.0.0.1 POST /v1/charts/chart/add.html
+[ error ] [10501]SQLSTATE[01000]: Warning: 1265 Data truncated for column 'create_time' at row 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Connection.php:463]
+---------------------------------------------------------------
+[ 2019-11-18T15:00:06+08:00 ] 127.0.0.1 POST /v1/charts/chart/edit.html
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Query.php:2560]
+---------------------------------------------------------------
+[ 2019-11-18T15:00:09+08:00 ] 127.0.0.1 POST /v1/charts/chart/edit.html
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Query.php:2560]
+---------------------------------------------------------------
+[ 2019-11-18T15:00:09+08:00 ] 127.0.0.1 POST /v1/charts/chart/edit.html
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Query.php:2560]
+---------------------------------------------------------------
+[ 2019-11-18T15:00:24+08:00 ] 127.0.0.1 POST /v1/charts/chart/edit.html
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Query.php:2560]
+---------------------------------------------------------------
+[ 2019-11-18T15:01:25+08:00 ] 127.0.0.1 POST /v1/charts/chart/edit.html
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Query.php:2560]
+---------------------------------------------------------------
+[ 2019-11-18T15:01:43+08:00 ] 127.0.0.1 POST /v1/charts/chart/edit.html
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Query.php:2560]
+---------------------------------------------------------------
+[ 2019-11-18T15:05:34+08:00 ] 127.0.0.1 POST /v1/charts/chart/edit.html
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Query.php:2560]
+---------------------------------------------------------------
+[ 2019-11-18T15:05:35+08:00 ] 127.0.0.1 POST /v1/charts/chart/edit.html
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Query.php:2560]
+---------------------------------------------------------------
+[ 2019-11-18T15:05:41+08:00 ] 127.0.0.1 POST /v1/charts/chart/edit.html
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Query.php:2560]
+---------------------------------------------------------------
+[ 2019-11-18T15:05:41+08:00 ] 127.0.0.1 POST /v1/charts/chart/edit.html
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\thinkphp\library\think\db\Query.php:2560]

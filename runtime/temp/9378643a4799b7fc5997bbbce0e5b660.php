@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/v1\view\index\index.html";i:1573779806;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\layout\default.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\meta.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\header.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\left.html";i:1573801204;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\footer.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\script.html";i:1573802144;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\public/../application/v1\view\index\index.html";i:1573779806;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\layout\default.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\meta.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\header.html";i:1573779806;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\left.html";i:1574067068;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\footer.html";i:1573779806;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hzs\application\v1\view\common\script.html";i:1573802144;}*/ ?>
 <!DOCTYPE>
 <html lang="zh-CN">
 <head>
@@ -188,113 +188,17 @@
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
 
-            <li class="treeview <?php if($paths == '/v1/users/user/index' || $paths == '/v1/protuct/protucts/index' || $paths == '/v1/info/infos/index' || $paths == '/v1/partners/partner/index' || $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?> " >
-                <a href="#">
+            <li class="treeview <?php if($paths == '/v1/index/index'): ?>active<?php endif; ?> " >
+                <a href="<?php echo url('/v1/index/index'); ?>">
                     <i class="fa fa-share"></i> <span>首页</span>
                     <span class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
-                <ul class="treeview-menu">
-                    <li class="<?php if($paths == '/v1/users/user/index'): ?>active<?php endif; ?>">
-                        <a href="#">
-                            <i class="glyphicon glyphicon-user"></i> <span>用户管理</span>
-                            <span class="pull-right-container">
-                              <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="<?php if($paths == '/v1/users/user/index'): ?>active<?php endif; ?>">
-                                <a href="<?php echo url('/v1/users/user/index'); ?>"><i class="fa fa-circle-o"></i>用户列表</a>
-                            </li>
-                        </ul>
-                    </li>
 
-                    <li class="<?php if($paths == '/v1/protuct/protucts/index'): ?>active<?php endif; ?>">
-                        <a href="#">
-                            <i class="fa fa-folder"></i> <span>慧享产品</span>
-                            <span class="pull-right-container">
-                              <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="<?php if($paths == '/v1/protuct/protucts/index'): ?>active<?php endif; ?>">
-                                <a href="<?php echo url('/v1/protuct/protucts/index'); ?>"><i class="fa fa-circle-o"></i>产品列表</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="<?php if($paths == '/v1/info/infos/index'): ?>active<?php endif; ?>">
-                        <a href="#">
-                            <i class="glyphicon glyphicon-th-large"></i> <span>招标信息</span>
-                            <span class="pull-right-container">
-                              <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="<?php if($paths == '/v1/info/infos/index'): ?>active<?php endif; ?>">
-                                <a href="<?php echo url('/v1/info/infos/index'); ?>"><i class="fa fa-circle-o"></i>信息详情列表</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- 注释
-                    <li class="<?php if($paths == '/v1/partners/partner/index'): ?>active<?php endif; ?>">
-                        <a href="#">
-                            <i class="glyphicon glyphicon-book"></i> <span>合作伙伴</span>
-                            <span class="pull-right-container">
-                              <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="<?php if($paths == '/v1/partners/partner/index'): ?>active<?php endif; ?>">
-                                <a href="<?php echo url('/v1/partners/partner/index'); ?>"><i class="fa fa-circle-o"></i>合作伙伴列表</a>
-                            </li>
-                        </ul>
-                    </li>
-                     -->
-                    <li class="<?php if($paths == '/v1/systematic/cases/index'): ?>active<?php endif; ?>">
-                        <a href="#">
-                            <i class="glyphicon glyphicon-inbox"></i> <span>案例管理</span>
-                            <span class="pull-right-container">
-                              <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="<?php if($paths == '/v1/systematic/cases/index'): ?>active<?php endif; ?>">
-                                <a href="<?php echo url('/v1/systematic/cases/index'); ?>"><i class="fa fa-circle-o"></i>案例列表</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="<?php if($paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
-                        <a href="#">
-                            <i class="fa fa-dashboard"></i> <span>系统管理</span>
-                            <span class="pull-right-container">
-                              <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <!--                    <li class="<?php if($paths == '/v1/systematic/system/menu'): ?>active<?php endif; ?>">
-                                                    <a href="<?php echo url('/v1/systematic/system/menu'); ?>"><i class="fa fa-circle-o"></i> 菜单管理</a>
-                                                </li>
-                                                <li class="<?php if($paths == '/v1/organ/organization/index'): ?>active<?php endif; ?>">
-                                                    <a href="<?php echo url('/v1/organ/organization/index'); ?>"><i class="fa fa-circle-o"></i>组织架构管理</a>
-                                                </li>-->
-                            <li class="<?php if($paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
-                                <a href="<?php echo url('/v1/systematic/system/setting'); ?>"><i class="fa fa-circle-o"></i>网站设置</a>
-                            </li>
-
-                            <li class="<?php if($paths == '/v1/systematic/system/slideshow'): ?>active<?php endif; ?>">
-                                <a href="<?php echo url('/v1/systematic/system/slideshow'); ?>"><i class="fa fa-circle-o"></i>首页轮播图</a>
-                            </li>
-
-                        </ul>
-                    </li>
-
-                </ul>
             </li>
 
-            <li class="treeview <?php if($paths == '/v1/charts/chart/index'): ?> active <?php endif; ?> " >
+            <li class="treeview <?php if($paths == '/v1/charts/chart/index' || $paths == '/v1/users/user/index'): ?> active <?php endif; ?> " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>惠找事</span>
                     <span class="pull-right-container">
@@ -302,7 +206,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="">
+                    <li class="<?php if($paths == '/v1/charts/chart/index'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/charts/chart/index'); ?>">
                             <i class="glyphicon glyphicon-user"></i> <span>首页图</span>
                             <span class="pull-right-container">
@@ -311,6 +215,21 @@
                         </a>
                     </li>
                 </ul>
+
+                <ul class="treeview-menu">
+                    <li class="<?php if($paths == '/v1/users/user/index'): ?>active<?php endif; ?>">
+                        <a href="<?php echo url('/v1/users/user/index'); ?>">
+                            <i class="glyphicon glyphicon-user"></i> <span>用户管理</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
             </li>
 
         </ul>

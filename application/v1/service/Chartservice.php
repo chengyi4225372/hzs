@@ -27,6 +27,18 @@ class Chartservice
         return self::$instance;
     }
 
+    /**
+     * 只显示一调数据 前台
+     *
+     * return array
+     */
+     public  function  getOne(){
+         $chart = Chart::instance()->order('create_time desc')->find();
+         return $chart;
+     }
+
+
+
 
    /**
     * 获取正常数据
@@ -86,7 +98,7 @@ class Chartservice
            return  false;
        }
 
-       $set_data = Chart::instance()->where(['id'=>$data])->data($data)->update();
+       $set_data = Chart::instance()->where(['id'=>$id])->data($data)->update();
 
        if($set_data && $set_data >0){
            return true;

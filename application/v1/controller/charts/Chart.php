@@ -34,7 +34,7 @@ class Chart extends AuthController
         if($this->request->isAjax() || $this->request->isPost()) {
             $data['imgs'] = input('post.imgs','','trim');
 
-            $data['create_time'] = date('Y-m-d');
+            $data['create_time'] = time();
 
             $ret = Chartservice::instance()->addData($data);
 
@@ -61,8 +61,23 @@ class Chart extends AuthController
 
         //编辑操作
         if($this->request->isPost()){
+          $id  = input('post.id','','int');
+          $imgs= input('post.imgs','','trim');
+
+          if(empty($id) || is_null($id) || !isset($id) || $id <= 0){
+              return false;
+          }
+
+          $ret = Chartservice::instance()->GetByIdSave($id,['imgs'=>$imgs]);
+
+          if($ret !== false){
+              return json(['code'=>200,'msg'=>'操作成功']);
+          }else {
+              return json(['code'=>400,'msg'=>'操作失败']);
+          }
 
         }
+
     }
 
 

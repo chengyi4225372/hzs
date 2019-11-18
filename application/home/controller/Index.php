@@ -2,12 +2,9 @@
 namespace app\home\controller;
 
 use app\common\controller\BaseController;
-use app\v1\service\Workservice;
+use app\v1\service\Chartservice;
 use think\Controller;
-use app\v1\service\Protuctservice;
-use app\v1\service\Infosservice;
 use app\v1\service\Systems;
-use app\v1\service\Caseservice;
 use think\Cookie;
 use think\Cache;
 class Index extends BaseController
@@ -18,6 +15,8 @@ class Index extends BaseController
 
         if ($this->request->isGet()) {
             //用户信息
+            $chart = Chartservice::instance()->getOne();
+            $this->assign('chart',$chart);
             $this->assign('userinfo',$this->userinfo);
             return $this->fetch();
         }
