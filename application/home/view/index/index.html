@@ -41,7 +41,9 @@
         <!-- 登陆注册 -->
         {if empty($userinfo['mobile'])}
         <div class="loging clearfix">
-          <div class="register-btn"><a href="{:config('curl.ge_login_url')}">
+          <div class="register-btn"><a href="javascript:void(0)"
+                                       login_url="{:config('curl.ge_login_url')}"
+                                       loca_url="{:config('curl.hzs')}" onclick="login_btn(this)">
             登录
           </a></div>
           <div class="loging-btn"><a href="{:config('curl.gr_register_url')}">注册</a></div>
