@@ -18,7 +18,7 @@
 <body>
 
   <div class='container'>
-
+    <input type="hidden" value="{$userinfo['userType']}" id="user_type">
     <!-- 导航部分 -->
     <div class="nav-box">
       <div class="w nav-container clearfix">
@@ -72,7 +72,7 @@
         <div class="header-icon">
           <div><img src="__HOME__/images/headericon.png" alt=""></div>
           <div><span></span></div>
-          <div>没事找事 就要<span>惠找事</span>
+          <div>没事找事 就上<span>惠找事</span>
           </div>
         </div>
         <div class="header-search">
@@ -104,7 +104,7 @@
         <div class="modified-line"></div>
         <div class="see-more">查看更多>></div>
         <div class="high-salary-project-items">
-          <ul class="clearfix">
+          <ul class="clearfix" id="project_item">
             <li class="high-salary-project-item">
               <a href="javascript:void(0)">
                 <div class="high-salary-project-item-img">服务员</div>
@@ -113,111 +113,6 @@
                   <span>汉口</span>
                   <span>3-5年经验</span>
                   <span>招188人</span>
-                  <span>3-5年经验</span>
-                  <span>招188人</span>
-                </div>
-                <div class="high-salary-project-item-title clearfix">
-                  <p>2600<span>元</span></p>
-                  <p>次结</p>
-                </div>
-              </a>
-            </li>
-            <li class="high-salary-project-item">
-              <a href="javascript:void(0)">
-                <div class="high-salary-project-item-img">服务员</div>
-                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
-                <div class="require">
-                  <span>汉口</span>
-                  <span>3-5年经验</span>
-                  <span>招188人</span>
-                </div>
-                <div class="high-salary-project-item-title clearfix">
-                  <p>2600<span>元</span></p>
-                  <p>次结</p>
-                </div>
-              </a>
-            </li>
-            <li class="high-salary-project-item">
-              <a href="javascript:void(0)">
-                <div class="high-salary-project-item-img">服务员</div>
-                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
-                <div class="require">
-                  <span>汉口</span>
-                  <span>3-5年经验</span>
-                  <span>招188人</span>
-                </div>
-                <div class="high-salary-project-item-title clearfix">
-                  <p>2600<span>元</span></p>
-                  <p>次结</p>
-                </div>
-              </a>
-            </li>
-            <li class="high-salary-project-item">
-              <a href="javascript:void(0)">
-                <div class="high-salary-project-item-img">服务员</div>
-                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
-                <div class="require">
-                  <span>汉口</span>
-                  <span>3-5年经验</span>
-                  <span>招188人</span>
-                </div>
-                <div class="high-salary-project-item-title clearfix">
-                  <p>2600<span>元</span></p>
-                  <p>次结</p>
-                </div>
-              </a>
-            </li>
-            <li class="high-salary-project-item">
-              <a href="javascript:void(0)">
-                <div class="high-salary-project-item-img">服务员</div>
-                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
-                <div class="require">
-                  <span>汉口</span>
-                  <span>3-5年经验</span>
-                  <span>招188人</span>
-                </div>
-                <div class="high-salary-project-item-title clearfix">
-                  <p>2600<span>元</span></p>
-                  <p>次结</p>
-                </div>
-              </a>
-            </li>
-            <li class="high-salary-project-item">
-              <a href="javascript:void(0)">
-                <div class="high-salary-project-item-img">服务员</div>
-                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
-                <div class="require">
-                  <span>汉口</span>
-                  <span>3-5年经验</span>
-                  <span>招188人</span>
-                </div>
-                <div class="high-salary-project-item-title clearfix">
-                  <p>2600<span>元</span></p>
-                  <p>次结</p>
-                </div>
-              </a>
-            </li>
-            <li class="high-salary-project-item">
-              <a href="javascript:void(0)">
-                <div class="high-salary-project-item-img">服务员</div>
-                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
-                <div class="require">
-                  <span>汉口</span>
-                  <span>3-5年经验</span>
-                  <span>招188人</span>
-                </div>
-                <div class="high-salary-project-item-title clearfix">
-                  <p>2600<span>元</span></p>
-                  <p>次结</p>
-                </div>
-              </a>
-            </li>
-            <li class="high-salary-project-item">
-              <a href="javascript:void(0)">
-                <div class="high-salary-project-item-img">服务员</div>
-                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
-                <div class="require">
-                  <span>汉口</span>
                   <span>3-5年经验</span>
                   <span>招188人</span>
                 </div>
@@ -228,7 +123,133 @@
               </a>
             </li>
           </ul>
-          <div>换一批<img src="__HOME__/images/shuaxing.png" alt="" class="icon"></div>
+
+
+<!--          <ul class="clearfix" id="project_item">
+            <li class="high-salary-project-item">
+              <a href="javascript:void(0)">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="javascript:void(0)">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="javascript:void(0)">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="javascript:void(0)">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="javascript:void(0)">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="javascript:void(0)">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="javascript:void(0)">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+            <li class="high-salary-project-item">
+              <a href="javascript:void(0)">
+                <div class="high-salary-project-item-img">服务员</div>
+                <p class="title">肯德基直聘全职服务员全职服务员全职服务员</p>
+                <div class="require">
+                  <span>汉口</span>
+                  <span>3-5年经验</span>
+                  <span>招188人</span>
+                </div>
+                <div class="high-salary-project-item-title clearfix">
+                  <p>2600<span>元</span></p>
+                  <p>次结</p>
+                </div>
+              </a>
+            </li>
+          </ul>-->
+          <div {if empty($userinfo['userType'])}onclick="empty_user_type(this)"{else /}onclick="not_empty_user_type(this)"{/if}>换一批<img src="__HOME__/images/shuaxing.png" alt="" class="icon"></div>
         </div>
       </div>
     </div>
@@ -590,6 +611,8 @@
 
 
   }
+
+
 </script>
 </body>
 
