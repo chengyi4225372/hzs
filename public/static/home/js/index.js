@@ -77,7 +77,6 @@ function empty_user_type(objthis) {
         },
         dataType: 'json',
         success: function (ret) {
-            console.log(ret.data.rows.length);
             if(ret.data.rows.length > 0){
                 var _html = '';
                 $.each(ret.data.rows,function (index,item){
