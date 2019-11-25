@@ -5,4 +5,5 @@ return [
     'hzs' => 'http://172.26.3.13:8010/index.php',//会找事
     'ge_login_url' => 'http://172.26.3.12:8009/#/logingr',
     'gr_register_url' => 'http://172.26.3.12:8009/#/registergr',
+    'hou_tai_url' => 'http://172.26.3.12:8009/#',
 ];
