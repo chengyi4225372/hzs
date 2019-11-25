@@ -25,7 +25,7 @@ $(function () {
                 _html += '</div>';
                 _html += '</div>';
                 _html += '<div class="modified-line"></div>';
-                _html += '<div class="see-more">查看更多>></div>';
+                _html += '<div class="see-more" onclick="show_more(this)">查看更多>></div>';
                 _html += '<div class="high-salary-project-items">';
                 _html += '<ul class="clearfix" id="ul_project">';
                 $.each(ret.data.rows,function (index,item){
@@ -130,7 +130,7 @@ function empty_user_type(objthis) {
                                 _html += '</a>';
                                 _html += '</li>';
                             });
-                            $('#project_item').append('').html(_html);
+                            $('#ul_project').append('').html(_html);
                         }
                     },
                     error: function (data) {
@@ -181,4 +181,19 @@ function keyword_search(objthis){
         }
     }
 
+}
+
+//查看更多
+function show_more(){
+    var login_url2 = $('#logins_url').val();
+    var loca_url2 = $('#local_url').val();
+    var user_type = $('#user_type').attr('data');
+    //console.log(user_type);return;
+    if(user_type != 'emptys'){
+        location.href = loca_url2;
+    }else{
+        var loca_url = encodeURIComponent(loca_url2);
+        var login_url = login_url2+'?artId='+loca_url;
+        location.href = login_url;
+    }
 }
