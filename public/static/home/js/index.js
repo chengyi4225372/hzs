@@ -82,7 +82,7 @@ function empty_user_type(objthis) {
                 var _html = '';
                 $.each(ret.data.rows,function (index,item){
                     _html += '<li class="high-salary-project-item">';
-                    _html += '<a href="javascript:void(0)" onclick="click_login()>'
+                    _html += '<a href="javascript:void(0)" onclick="click_login()>';
                     _html += '<div class="high-salary-project-item-img">'+item.industryName+'</div>';
                     _html += '<p class="title">'+item.jobTitle+'</p>';
                     _html += '<div class="require">';
@@ -115,7 +115,7 @@ function empty_user_type(objthis) {
                             var _html = '';
                             $.each(ret.data.rows,function (index,item){
                                 _html += '<li class="high-salary-project-item">';
-                                _html += '<a href="javascript:void(0)" onclick="click_login()>'
+                                _html += '<a href="javascript:void(0)" onclick="click_login()>';
                                 _html += '<div class="high-salary-project-item-img">'+item.industryName+'</div>';
                                 _html += '<p class="title">'+item.jobTitle+'</p>';
                                 _html += '<div class="require">';
