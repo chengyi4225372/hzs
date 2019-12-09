@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"C:\phpEnv\www\hzs\public/../application/home\view\index\index.html";i:1575863627;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,36 +12,36 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>惠找事</title>
-    <link rel="stylesheet" href="__HOME__/css/base.css">
-    <link rel="stylesheet" href="__HOME__/css/index.css">
+    <link rel="stylesheet" href="/static/home/css/base.css">
+    <link rel="stylesheet" href="/static/home/css/index.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="__HOME__/js/clamp.js"></script>
-    <script src='__HOME__/js/index.js'></script>
-    <script src='__PUBLIC__/common/js/public.js'></script>
+    <script src="/static/home/js/clamp.js"></script>
+    <script src='/static/home/js/index.js'></script>
+    <script src='/static/common/js/public.js'></script>
 </head>
 
 <body>
 
     <div class='container'>
-        <div type="hidden" data="{if empty($userinfo['userType'])}emptys{else /}{$userinfo['userType']}{/if}"
+        <div type="hidden" data="<?php if(empty($userinfo['userType'])): ?>emptys<?php else: ?><?php echo $userinfo['userType']; endif; ?>"
             id="user_type"></div>
         <!-- 导航部分 -->
         <div class="nav-box">
             <div class="w nav-container clearfix">
                 <!-- logo图 -->
                 <div class="logo clearfix">
-                    <img src="__HOME__/images/logo.png" alt="">
+                    <img src="/static/home/images/logo.png" alt="">
                 </div>
                 <!-- nav部分 -->
                 <div class="nav">
                     <ul class="clearfix">
-                        <!-- <li><a href="{:config('curl.website')}">首页</a></li>
-                        <li><a href="{:url('/home/optimal/index')}">惠优税</a></li>
-                        <li><a href="{:config('curl.hlg')}">惠灵工</a></li>
-                        <li><a href="{:url('/home/many/index')}">惠多薪</a></li>
-                        <li><a href="{:url('/home/business/index')}">惠创业</a></li>
-                        <li class="nav-active"><a href="{:url('/home/index/index')}">惠找事</a></li>
-                        <li><a href="{:url('/home/launch/index')}">惠企动</a></li> -->
+                        <!-- <li><a href="<?php echo config('curl.website'); ?>">首页</a></li>
+                        <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                        <li><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></li>
+                        <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
+                        <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                        <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠找事</a></li>
+                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li> -->
                         <li class="nav-active"><a href="#">首页</a></li>
                         <li><a href="#">产品服务</a></li>
                         <li><a href="#">行业解决方案</a></li>
@@ -50,29 +51,29 @@
                     </ul>
                 </div>
                 <!-- 登陆注册 -->
-                <!--{if empty($userinfo['mobile'])}-->
+                <!--<?php if(empty($userinfo['mobile'])): ?>-->
                 <!--<div class="loging clearfix">-->
                 <!--<div class="register-btn"><a href="javascript:void(0)"-->
-                <!--login_url="{:config('curl.ge_login_url')}"-->
-                <!--loca_url="{:config('curl.hzs')}" onclick="login_btn(this)">-->
+                <!--login_url="<?php echo config('curl.ge_login_url'); ?>"-->
+                <!--loca_url="<?php echo config('curl.hzs'); ?>" onclick="login_btn(this)">-->
                 <!--登录-->
                 <!--</a></div>-->
-                <!--<div class="loging-btn"><a href="{:config('curl.gr_register_url')}">注册</a></div>-->
+                <!--<div class="loging-btn"><a href="<?php echo config('curl.gr_register_url'); ?>">注册</a></div>-->
                 <!--</div>-->
-                <!--{else /}-->
+                <!--<?php else: ?>-->
                 <!--&lt;!&ndash; 头像部分 &ndash;&gt;-->
                 <!--<div class="user-icon-box">-->
-                <!--<img class="user-icon" src="__HOME__/images/icon.png" alt="">-->
-                <!--<span class="phone" id="mobile_phone">{$userinfo['mobile']}</span>-->
+                <!--<img class="user-icon" src="/static/home/images/icon.png" alt="">-->
+                <!--<span class="phone" id="mobile_phone"><?php echo $userinfo['mobile']; ?></span>-->
                 <!--<div class="login-out">-->
                 <!--<ul>-->
-                <!--<li><a href="javascript:void(0)" data-token="{$userinfo['token']}" onclick="user_logout(this)"-->
-                <!--location_url="{:url('/home/index/index')}"-->
-                <!--data-url="{:url('/home/login/logout')}">退出登录</a></li>-->
+                <!--<li><a href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>" onclick="user_logout(this)"-->
+                <!--location_url="<?php echo url('/home/index/index'); ?>"-->
+                <!--data-url="<?php echo url('/home/login/logout'); ?>">退出登录</a></li>-->
                 <!--</ul>-->
                 <!--</div>-->
                 <!--</div>-->
-                <!--{/if}-->
+                <!--<?php endif; ?>-->
 
 
             </div>
@@ -80,18 +81,18 @@
         </div>
 
         <!-- 头部 -->
-        <div class='header-box' style="background: url({$chart.imgs}) no-repeat center bottom;">
+        <div class='header-box' style="background: url(<?php echo $chart['imgs']; ?>) no-repeat center bottom;">
             <div class='w header-container clearfix'>
                 <div class="header-icon">
-                    <div><img src="__HOME__/images/headericon.png" alt=""></div>
+                    <div><img src="/static/home/images/headericon.png" alt=""></div>
                     <div><span></span></div>
                     <div>没事找事 就上<span>惠找事</span>
                     </div>
                 </div>
                 <div class="header-search">
                     <input type="text" id="keywords" value="">
-                    <div onclick="keyword_search(this)" login_url="{:config('curl.ge_login_url')}"
-                        loca_url="{:config('curl.hou_tai_url')}/personTask/myTask">搜索</div>
+                    <div onclick="keyword_search(this)" login_url="<?php echo config('curl.ge_login_url'); ?>"
+                        loca_url="<?php echo config('curl.hou_tai_url'); ?>/personTask/myTask">搜索</div>
                 </div>
                 <div class="focus-icon">
                     热门搜索:
@@ -107,8 +108,8 @@
         </div>
 
         <!-- 高薪项目 -->
-        <input type="hidden" id="local_url" value="{:config('curl.hou_tai_url')}/personTask/myTask" />
-        <input type="hidden" id="logins_url" value="{:config('curl.ge_login_url')}" />
+        <input type="hidden" id="local_url" value="<?php echo config('curl.hou_tai_url'); ?>/personTask/myTask" />
+        <input type="hidden" id="logins_url" value="<?php echo config('curl.ge_login_url'); ?>" />
         <div class="high-salary-project-box" id="project_item">
 
         </div>
@@ -127,7 +128,7 @@
                         <div class="create-income-shade"></div>
                         <div class="create-income-content-box">
                             <p class="icon">
-                                <img src="__HOME__/images/tishi.png" alt="">
+                                <img src="/static/home/images/tishi.png" alt="">
                             </p>
                             <p>自主创客</p>
                             <p>技能价值化，成就更好自我</p>
@@ -142,7 +143,7 @@
                         <div class="create-income-shade"></div>
                         <div class="create-income-content-box">
                             <p class="icon">
-                                <img src="__HOME__/images/xiaojuchang.png" alt="">
+                                <img src="/static/home/images/xiaojuchang.png" alt="">
                             </p>
                             <p>自由务工</p>
                             <p>技能价值化，成就更好自我</p>
@@ -173,8 +174,8 @@
                             <a href="javascript:void(0)">
                                 <div>
                                     <span>
-                                        <img class="our-services-active1" src="__HOME__/images/qiye1.png" alt="">
-                                        <img class="our-services-active2" src="__HOME__/images/qiye2.png" alt="">
+                                        <img class="our-services-active1" src="/static/home/images/qiye1.png" alt="">
+                                        <img class="our-services-active2" src="/static/home/images/qiye2.png" alt="">
                                     </span>
                                 </div>
                                 <div>名企推荐</div>
@@ -187,8 +188,8 @@
                             <a href="javascript:void(0)">
                                 <div>
                                     <span>
-                                        <img class="our-services-active1" src="__HOME__/images/tishi1.png" alt="">
-                                        <img class="our-services-active2" src="__HOME__/images/tishi3.png" alt="">
+                                        <img class="our-services-active1" src="/static/home/images/tishi1.png" alt="">
+                                        <img class="our-services-active2" src="/static/home/images/tishi3.png" alt="">
                                     </span>
                                 </div>
                                 <div>创客天地</div>
@@ -201,8 +202,8 @@
                             <a href="javascript:void(0)">
                                 <div>
                                     <span>
-                                        <img class="our-services-active1" src="__HOME__/images/xiaojuchang1.png" alt="">
-                                        <img class="our-services-active2" src="__HOME__/images/xiaojuchang3.png" alt="">
+                                        <img class="our-services-active1" src="/static/home/images/xiaojuchang1.png" alt="">
+                                        <img class="our-services-active2" src="/static/home/images/xiaojuchang3.png" alt="">
                                     </span>
                                 </div>
                                 <div>自由务工</div>
@@ -215,8 +216,8 @@
                             <a href="javascript:void(0)">
                                 <div>
                                     <span>
-                                        <img class="our-services-active1" src="__HOME__/images/baozhang1.png" alt="">
-                                        <img class="our-services-active2" src="__HOME__/images/baozhang2.png" alt="">
+                                        <img class="our-services-active1" src="/static/home/images/baozhang1.png" alt="">
+                                        <img class="our-services-active2" src="/static/home/images/baozhang2.png" alt="">
                                     </span>
                                 </div>
                                 <div>薪酬保障</div>
@@ -245,56 +246,56 @@
                         <li class="cover-industry-item">
                             <div class="shade"></div>
                             <div class="cover-industry-item-content">
-                                <div><img src="__HOME__/images/shenghuo.png" alt=""></div>
+                                <div><img src="/static/home/images/shenghuo.png" alt=""></div>
                                 <div>生活服务</div>
                             </div>
                         </li>
                         <li class="cover-industry-item">
                             <div class="shade"></div>
                             <div class="cover-industry-item-content">
-                                <div><img src="__HOME__/images/yunshu.png" alt=""></div>
+                                <div><img src="/static/home/images/yunshu.png" alt=""></div>
                                 <div>物流配送</div>
                             </div>
                         </li>
                         <li class="cover-industry-item">
                             <div class="shade"></div>
                             <div class="cover-industry-item-content">
-                                <div><img src="__HOME__/images/tuantongshouyi.png" alt=""></div>
+                                <div><img src="/static/home/images/tuantongshouyi.png" alt=""></div>
                                 <div>传统行业</div>
                             </div>
                         </li>
                         <li class="cover-industry-item">
                             <div class="shade"></div>
                             <div class="cover-industry-item-content">
-                                <div><img src="__HOME__/images/hulianwnag.png" alt=""></div>
+                                <div><img src="/static/home/images/hulianwnag.png" alt=""></div>
                                 <div>互联网</div>
                             </div>
                         </li>
                         <li class="cover-industry-item">
                             <div class="shade"></div>
                             <div class="cover-industry-item-content">
-                                <div><img src="__HOME__/images/zixun2.png" alt=""></div>
+                                <div><img src="/static/home/images/zixun2.png" alt=""></div>
                                 <div>咨询营销</div>
                             </div>
                         </li>
                         <li class="cover-industry-item">
                             <div class="shade"></div>
                             <div class="cover-industry-item-content">
-                                <div><img src="__HOME__/images/peixunfazhan.png" alt=""></div>
+                                <div><img src="/static/home/images/peixunfazhan.png" alt=""></div>
                                 <div>培训服务</div>
                             </div>
                         </li>
                         <li class="cover-industry-item">
                             <div class="shade"></div>
                             <div class="cover-industry-item-content">
-                                <div><img src="__HOME__/images/ditie.png" alt=""></div>
+                                <div><img src="/static/home/images/ditie.png" alt=""></div>
                                 <div>出行行业</div>
                             </div>
                         </li>
                         <li class="cover-industry-item">
                             <div class="shade"></div>
                             <div class="cover-industry-item-content">
-                                <div><img src="__HOME__/images/zixun.png" alt=""></div>
+                                <div><img src="/static/home/images/zixun.png" alt=""></div>
                                 <div>电话客服</div>
                             </div>
                         </li>
@@ -306,7 +307,7 @@
         <!-- 广告位 -->
         <div class="advertising-box">
             <div class="w advertising">
-                <a href="javascript:void(0)"><img src="__HOME__/images/guanggaowei.png" alt=""></a>
+                <a href="javascript:void(0)"><img src="/static/home/images/guanggaowei.png" alt=""></a>
             </div>
         </div>
 
@@ -320,7 +321,7 @@
                 </div>
                 <div class="modified-line"></div>
                 <div class="partner-img">
-                    <img src="__HOME__/images/hezuohuoban2x.png" alt="">
+                    <img src="/static/home/images/hezuohuoban2x.png" alt="">
                 </div>
             </div>
         </div>
@@ -362,9 +363,9 @@
 
                 </div>
                 <div class='concat_icon clearfix'>
-                    <div><img src="__HOME__/images/tie.png" alt=""></div>
-                    <div><img src="__HOME__/images/wx.png" alt=""></div>
-                    <div><img src="__HOME__/images/bo.png" alt=""></div>
+                    <div><img src="/static/home/images/tie.png" alt=""></div>
+                    <div><img src="/static/home/images/wx.png" alt=""></div>
+                    <div><img src="/static/home/images/bo.png" alt=""></div>
                 </div>
             </div>
         </div>
@@ -413,14 +414,14 @@
                 left.classList.add('create-income-active')
 
                 right.classList.remove('create-income-active')
-                imgLeft.src = "__HOME__/images/tishi2.png"
-                imgRight.src = "__HOME__/images/xiaojuchang2.png"
+                imgLeft.src = "/static/home/images/tishi2.png"
+                imgRight.src = "/static/home/images/xiaojuchang2.png"
             }
             right.onmouseover = function () {
                 right.classList.add('create-income-active')
                 left.classList.remove('create-income-active')
-                imgLeft.src = "__HOME__/images/tishi.png"
-                imgRight.src = "__HOME__/images/xiaojuchang.png"
+                imgLeft.src = "/static/home/images/tishi.png"
+                imgRight.src = "/static/home/images/xiaojuchang.png"
             }
 
             // 返回顶部
